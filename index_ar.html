@@ -81,29 +81,23 @@
   <header>
     <button class="lang-toggle" onclick="switchLanguage()">English</button>
     <h1>طلب عرض تأمين</h1>
-    <p>يرجى تعبئة النموذج أدناه وسنتواصل معك قريبًا</p>
+    <p>يرجى تعبئة النموذج أدناه وسنقوم بالتواصل معك قريبًا</p>
   </header>
-
   <main>
-    <form action="mailto:prime1cover@gmail.com" method="POST" enctype="multipart/form-data">
+    <form action="https://formspree.io/f/xbjnqgvl" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="طلب عرض تأمين جديد من PrimeCover">
       <label for="fullname">الاسم الكامل</label>
       <input type="text" id="fullname" name="fullname" required>
-
       <label for="phone">رقم الهاتف</label>
       <input type="tel" id="phone" name="phone" required>
-
       <label for="email">البريد الإلكتروني</label>
       <input type="email" id="email" name="email">
-
       <label for="car">نوع وموديل السيارة</label>
       <input type="text" id="car" name="car" required>
-
       <label for="notes">ملاحظات إضافية</label>
       <textarea id="notes" name="notes" rows="4"></textarea>
-
-      <label for="documents">رفع الملفات (PDF أو صور)</label>
+      <label for="documents">إرفاق المستندات (PDF أو صور)</label>
       <input type="file" id="documents" name="documents" accept=".pdf,image/*" multiple>
-
       <button type="submit">إرسال الطلب</button>
     </form>
   </main>
