@@ -1,36 +1,24 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PrimeCover - Insurance Quote Request</title>
+  <title>PrimeCover - طلب عرض تأمين</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f2f2f2;
+      background: #f9f9f9;
       color: #333;
+      direction: rtl;
     }
     header {
       background-color: #003366;
       color: white;
       padding: 20px;
       text-align: center;
-      position: relative;
-    }
-    .lang-toggle {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background: white;
-      color: #003366;
-      padding: 6px 12px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
     }
     main {
       max-width: 600px;
@@ -49,7 +37,7 @@
       margin-top: 15px;
       font-weight: bold;
     }
-    form input, form textarea, form select {
+    form input, form select {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
@@ -70,37 +58,51 @@
     form button:hover {
       background-color: #002244;
     }
-  </style>
-  <script>
-    function switchLanguage() {
-      window.location.href = 'index_ar.html';
+    .whatsapp {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
     }
-  </script>
+    .whatsapp a {
+      background: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <button class="lang-toggle" onclick="switchLanguage()">عربي</button>
-    <h1>Insurance Quote Request</h1>
-    <p>Please fill out the form below and we will contact you shortly</p>
+    <h1>طلب عرض تأمين - PrimeCover</h1>
   </header>
 
   <main>
-    <form action="https://formspree.io/f/xkgbrbdr" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="_subject" value="New Insurance Quote Request from PrimeCover">
-      <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" required>
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email">
-      <label for="car">Car Make and Model</label>
-      <input type="text" id="car" name="car" required>
-      <label for="notes">Additional Notes</label>
-      <textarea id="notes" name="notes" rows="4"></textarea>
-      <label for="documents">Upload Documents (PDF or images)</label>
-      <input type="file" id="documents" name="documents" accept=".pdf,image/*" multiple>
-      <button type="submit">Submit Request</button>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeQwNWpUtau1wlJEnJXWttFFftdODM7nDgBvcM1SWxYrTmfkw/formResponse" method="POST" target="_blank">
+      <label for="fullname">الاسم الكامل</label>
+      <input type="text" id="fullname" name="entry.2005620554" required>
+
+      <label for="phone">رقم الهاتف</label>
+      <input type="tel" id="phone" name="entry.1045781291" required>
+
+      <label for="email">البريد الإلكتروني (اختياري)</label>
+      <input type="email" id="email" name="entry.1065046570">
+
+      <label for="type">نوع التأمين</label>
+      <select id="type" name="entry.1166974658" required>
+        <option value="شامل">شامل</option>
+        <option value="ضد الغير">ضد الغير</option>
+      </select>
+
+      <p style="color:red; font-size: 14px;">※ بعد إرسال النموذج، سيتم إرسال رابط رفع الملفات عبر البريد أو الواتساب.</p>
+
+      <button type="submit">إرسال الطلب</button>
     </form>
+
+    <div class="whatsapp">
+      <a href="https://wa.me/971568587843" target="_blank">تواصل عبر واتساب: 0568587843</a>
+    </div>
   </main>
 </body>
 </html>
