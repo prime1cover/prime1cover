@@ -2,102 +2,32 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>برايم كوفر - طلب عرض تأمين</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f2f2f2;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      position: relative;
-    }
-    .lang-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: white;
-      color: #003366;
-      padding: 6px 12px;
-      border-radius: 6px;
-      border: none;
-      cursor: pointer;
-      font-size: 14px;
-    }
-    main {
-      max-width: 600px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #003366;
-    }
-    form label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    form input, form textarea, form select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
-    }
-    form button {
-      background-color: #003366;
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      margin-top: 20px;
-      cursor: pointer;
-      width: 100%;
-    }
-    form button:hover {
-      background-color: #002244;
-    }
-  </style>
-  <script>
-    function switchLanguage() {
-      window.location.href = 'index.html';
-    }
-  </script>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <header>
-    <button class="lang-toggle" onclick="switchLanguage()">English</button>
+    <button class="lang-toggle" onclick="window.location.href='index.html'">English</button>
     <h1>طلب عرض تأمين</h1>
-    <p>يرجى تعبئة النموذج أدناه وسنقوم بالتواصل معك قريبًا</p>
+    <p>يرجى تعبئة النموذج وسنتواصل معك قريبًا</p>
   </header>
   <main>
-    <form action="https://formspree.io/f/xbjnqgvl" method="POST" enctype="multipart/form-data">
-      <input type="hidden" name="_subject" value="طلب عرض تأمين جديد من PrimeCover">
+    <form action="https://formspree.io/f/xkgbrbdr" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="طلب تأمين جديد من PrimeCover" />
       <label for="fullname">الاسم الكامل</label>
-      <input type="text" id="fullname" name="fullname" required>
+      <input type="text" id="fullname" name="fullname" required />
       <label for="phone">رقم الهاتف</label>
-      <input type="tel" id="phone" name="phone" required>
+      <input type="tel" id="phone" name="phone" required />
       <label for="email">البريد الإلكتروني</label>
-      <input type="email" id="email" name="email">
+      <input type="email" id="email" name="email" />
       <label for="car">نوع وموديل السيارة</label>
-      <input type="text" id="car" name="car" required>
+      <input type="text" id="car" name="car" required />
       <label for="notes">ملاحظات إضافية</label>
       <textarea id="notes" name="notes" rows="4"></textarea>
-      <label for="documents">إرفاق المستندات (PDF أو صور)</label>
-      <input type="file" id="documents" name="documents" accept=".pdf,image/*" multiple>
+      <label for="documents">رفع مستندات (PDF أو صور)</label>
+      <input type="file" id="documents" name="documents" accept=".pdf,image/*" multiple />
       <button type="submit">إرسال الطلب</button>
     </form>
   </main>
