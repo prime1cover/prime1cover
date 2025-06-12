@@ -1,0 +1,56 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+header {
+  background: #003366;
+  color: white;
+  padding: 10px 0;
+}
+.logo {
+  height: 60px;
+  vertical-align: middle;
+}
+nav {
+  float: left;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  background: url('banner.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+.hero .cta-btn {
+  background: #25D366;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.section {
+  padding: 60px 0;
+  background: white;
+}
+.section.light {
+  background: #eef4ff;
+}
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
